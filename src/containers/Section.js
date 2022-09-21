@@ -5,6 +5,11 @@ import NavBar from '../components/NavBar';
 import MobileNavBar from '../components/MobileNavBar';
 import Article from '../components/Article';
 
+const Container = styled.div`
+    background-color: lightgray;
+    height: 100vh;
+`;
+
 const SectionTitle = styled.div`
     font-size: 2rem;
     font-weight: bold;
@@ -12,7 +17,7 @@ const SectionTitle = styled.div`
 
 const Section = ({articles, header}) => {
     return(
-        <main>
+        <Container>
             {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>}
             <SectionTitle>{header}</SectionTitle>
             {articles.map(article => (
@@ -23,7 +28,7 @@ const Section = ({articles, header}) => {
                     image={article.image_url}
                 />
             ))}
-        </main>
+        </Container>
     );
 };
 
