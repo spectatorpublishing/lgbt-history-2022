@@ -9,20 +9,20 @@ const Title = styled.div`
 `;
 
 const Container = styled.div`
-    background-color: lightpink;
+    background-color: lavender;
     height: 15rem;
     @media only screen and (max-width: 768px){
     }
 `;
 
-const Credits = ({ }) => {
+const Rainbow = ({ }) => {
     return (
         <Container>
             <Title>
-                Credits
+                Rainbow
             </Title>
         </Container>
     )
 };
 
-export default Credits;
+export default Rainbow;

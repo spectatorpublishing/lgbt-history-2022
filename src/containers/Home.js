@@ -6,6 +6,7 @@ import Credits from '../components/Credits';
 import theme from '../theme';
 import NavBar from '../components/NavBar';
 import MobileNavBar from '../components/MobileNavBar';
+import Rainbow from '../components/Rainbow';
 
 const HomeContainer = styled.div`
     @media only screen and (max-width: 768px){
@@ -29,6 +30,7 @@ const Home = ({ }) => {
             {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>}
             <Illustration>Illustration goes here (scroll down for more)</Illustration>
             <LetterEditor/>
+            <Rainbow/>
             <Credits/>
         </HomeContainer>
     )
