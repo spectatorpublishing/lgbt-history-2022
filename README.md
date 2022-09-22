@@ -1,5 +1,9 @@
 # LGBT History Special Edition 2022
 
+Figma: https://www.figma.com/file/njlpRkUaQqRR1YYntREOOK/Page?node-id=0%3A1
+
+NSOP Edition: https://nsop2022.columbiaspectator.com/ (if it doesn't load because of the security popup just type "thisisunsafe")
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
