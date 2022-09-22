@@ -6,10 +6,23 @@ import theme from '../theme';
 const Title = styled.div`
     font-size: 2rem;
     font-weight: bold;
+    color: CornflowerBlue;
+`;
+
+const Bar = styled.div`
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    display: flex;
+`;
+
+const Body = styled.div`
+    font-size: 1rem;
+    color: CornflowerBlue
 `;
 
 const Container = styled.div`
-    background-color: lightblue;
+    background-color: white;
     @media only screen and (max-width: 768px){
     }
 `;
@@ -29,8 +42,10 @@ Sed finibus ullamcorper sem in volutpat. Fusce ac justo mattis, pharetra urna in
 const LetterEditor = ({ }) => {
     return (
         <Container>
-            <Title> LetterEditor </Title>
-            <div> {letter} </div>
+            <Bar>
+            <Title> LETTER FROM THE EDITOR </Title>
+            </Bar>
+            <Body> {letter} </Body>
         </Container>
     )
 };
