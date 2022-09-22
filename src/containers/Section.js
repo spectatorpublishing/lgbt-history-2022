@@ -6,6 +6,7 @@ import MobileNavBar from '../components/MobileNavBar';
 import Article from '../components/Article';
 
 const Container = styled.div`
+    font-family: 'Josefin Sans', sans-serif;
     background-color: lightgray;
     height: 100vh;
 `;

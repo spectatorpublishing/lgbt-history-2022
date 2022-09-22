@@ -9,6 +9,7 @@ import MobileNavBar from '../components/MobileNavBar';
 import Rainbow from '../components/Rainbow';
 
 const HomeContainer = styled.div`
+    font-family: 'Josefin Sans', sans-serif;
     @media only screen and (max-width: 768px){
     }
 `;

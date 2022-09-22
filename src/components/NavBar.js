@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import theme from '../theme';
 
 const Container = styled.div`
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     position: absolute;
