@@ -16,10 +16,8 @@ const Border = styled.div`
 
 const Title = styled.div`
     font-size: 70px; 
-    font-family: Josefin Sans;
     font-weight: 400;
     line-height: 70px;
-    color: rgba(0, 117, 255, 0.7);
 `;
 
 const Bar = styled.div`
@@ -29,11 +27,9 @@ const Bar = styled.div`
 `;
 
 const Body = styled.div`
-    font-family: Josefin Sans;
     font-weight: 400;
     line-height: 20px;
     font-size: 20px;
-    color: rgba(0, 117, 255, 0.8);
 `;
 
 const p = styled.div`
@@ -47,7 +43,6 @@ const p = styled.div`
 const Editor = styled.div`
     font-weight: 700;
     font-size: 20px;
-    color: rgba(0, 117, 255, 0.8);
 `;
 
 const Position = styled.div`
