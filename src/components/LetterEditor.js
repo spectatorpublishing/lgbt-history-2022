@@ -4,37 +4,62 @@ import { device } from '../device';
 import theme from '../theme';
 
 const Wrapper = styled.div`
-    padding: 80px; 
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 120px; 
+`;
+
+const Border = styled.div`
+    border: 1px solid ${({ color }) => color || "CornflowerBlue"};
+    padding: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
 `;
 
 const Title = styled.div`
-    font-size: 3rem; 
-    font-weight: bold;
-    color: CornflowerBlue;
+    font-size: 70px; 
+    font-family: Josefin Sans;
+    font-weight: 400;
+    line-height: 70px;
+    color: rgba(0, 117, 255, 0.7);
 `;
 
 const Bar = styled.div`
-    width: 100%;
-    height: 5rem;
     align-items: center;
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 `;
 
 const Body = styled.div`
+    font-family: Josefin Sans;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 20px;
+    color: rgba(0, 117, 255, 0.8);
+`;
+
+const p = styled.div`
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-size: 1rem;
-    color: CornflowerBlue;
+`;
+
+const Editor = styled.div`
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0, 117, 255, 0.8);
+`;
+
+const Position = styled.div`
+    margin-top: -18px;
+    font-weight: 400;
+    font-size: 20px;
 `;
 
 const Container = styled.div`
     background-color: white;
+    font-family: Josefin Sans;
+    color: rgba(0, 117, 255, 0.8);
     @media only screen and (max-width: 768px){
     }
 `;
@@ -62,12 +87,21 @@ Pellentesque sagittis enim eget luctus luctus. In placerat erat id lacus ullamco
 const LetterEditor = ({ }) => {
     return (
         <Wrapper>
+        <Border>
         <Container>
             <Bar><Title> LETTER FROM THE EDITOR </Title></Bar>
-            <Body> {p1} </Body>
-            <Body> {p2} </Body>
-            <Body> {p3} </Body>
+            <Body><p>{p1}</p></Body>
+            <Body><p>{p2}</p></Body>
+            <Body><p>{p3}</p></Body>
+            <Body><p>Sincerely,</p></Body>
+            <Editor><p>Clara Ence Morse</p></Editor>
+            <Position><p>Editor</p></Position>
+            <Editor><p>Dia Gill</p></Editor>
+            <Position><p>Managing Editor</p></Position>
+            <Editor><p>Vilanna Wang</p></Editor>
+            <Position><p>Publisher</p></Position>
         </Container>
+        </Border>
         </Wrapper>
     )
 };
