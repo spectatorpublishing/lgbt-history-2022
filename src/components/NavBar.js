@@ -18,17 +18,36 @@ const Container = styled.div`
     }
 `;
 
+const VertNav = styled.div`
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    text-align: right;
+    position: fixed;
+    right: 1vw;
+    top:3vh;
+    font-weight:700;
+    z-index:100;
+    @media only screen and (max-width: 768px){
+    }
+`;
+
 const MenuItem = styled.div`
     padding: 0.5rem 1rem;
     a {
         text-decoration: none;
-        color: ${theme.colors.black};
+        color: ${theme.colors.white};
+        
     }
+
+    a:hover {
+        color: #ACBAED;
+    }
+    
 `;
 
 const NavBar = ({ }) => {
     return (
-        <Container>
+        <VertNav>
             <MenuItem>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
@@ -41,7 +60,7 @@ const NavBar = ({ }) => {
                     <Link to={section.url}>{section.title}</Link>
                 </MenuItem>
             ))}
-        </Container>
+        </VertNav>
     )
 };
 
