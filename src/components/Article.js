@@ -21,6 +21,9 @@ const Author = styled.div`
     font-weight: 400;
     font-size: 30px;
 `;
+const Filter = styled.div`
+    filter: grayscale(1);
+`;
 
 const p = styled.div`
     display: block;
@@ -35,7 +38,7 @@ const Article = ({ link, title, author, image }) => {
         <Container>
         <Border>
             <a href = {link}>
-            <img style = {{height: 600, flex: 1, width: null, }} src = {image}></img>
+            <Filter><img style = {{height: 500, flex: 1, width: null, }} src = {image}></img></Filter>
             </a>
             <p><Title>{title}</Title></p>
             <p><Author>{author}</Author></p>
