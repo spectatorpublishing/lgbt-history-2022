@@ -32,7 +32,8 @@ const TitleOpen = styled.div`
 
 const Container = styled.div`
     background-color: lavender;
-    height: 120vh;
+    // height: 120vh;
+    display: flex;
     @media only screen and (max-width: 768px){
     }   
 `;
@@ -42,7 +43,8 @@ const Flag = styled.div`
     margin: 2rem;
     flex-direction: row;
     display: flex;
-    height: 100%;
+    height: 120vh;
+    width: 100%;
 `;
 
 const RedClosed = styled.div`
