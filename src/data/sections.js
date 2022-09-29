@@ -1,19 +1,19 @@
 export const sections = [
     {
-        title: "Home",
+        title: "HOME",
         url: "/",
         exact: true,
     },
     {
-        title: "News",
+        title: "NEWS",
         url: "/news",
     },
     {
-        title: "Opinion",
+        title: "OPINION",
         url: "/opinion",
     },
     {
-        title: "Sports",
+        title: "SPORTS",
         url: "/sports",
     },
     {
@@ -21,7 +21,7 @@ export const sections = [
         url: "/a&e",
     },
     {
-        title: "The Eye",
+        title: "THE EYE",
         url: "/eye",
     },
 ];
