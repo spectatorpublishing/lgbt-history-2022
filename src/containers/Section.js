@@ -9,6 +9,7 @@ const Container = styled.div`
     font-family: 'Josefin Sans', sans-serif;
     background-color: lightgray;
     height: 100vh;
+    padding: 160px;
 `;
 
 const SectionTitle = styled.div`
