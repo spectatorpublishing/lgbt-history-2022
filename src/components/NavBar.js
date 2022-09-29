@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components';
 import { device } from '../device';
 import { sections } from '../data/sections';
@@ -8,46 +8,45 @@ import theme from '../theme';
 const Container = styled.div`
     font-family: 'Barlow', sans-serif;
     font-weight: bold;
+    text-align: right;
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 8rem;
-    top: 0;
-    right: 0;
+    top: 2rem;
+    right: 1rem;
     @media only screen and (max-width: 768px){
     }
 `;
 
-const VertNav = styled.div`
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    text-align: right;
-    position: fixed;
-    right: 1vw;
-    top:3vh;
-    font-weight:700;
-    z-index:100;
-    @media only screen and (max-width: 768px){
-    }
-`;
+// const VertNav = styled.div`
+//     font-family: 'Barlow', sans-serif;
+//     font-weight: bold;
+//     text-align: right;
+//     position: fixed;
+//     right: 1vw;
+//     top:3vh;
+//     font-weight:700;
+//     z-index:100;
+//     @media only screen and (max-width: 768px){
+//     }
+// `;
 
 const MenuItem = styled.div`
     padding: 1rem 2rem;
+    cursor: pointer;
     a {
         text-decoration: none;
         color: ${theme.colors.white};
-        
     }
-
     a:hover {
         color: #ACBAED;
     }
-    
 `;
 
-const NavBar = ({ }) => {
+const NavBar = ({handleClick}) => {
     return (
-        <VertNav>
+        <Container>
             <MenuItem>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
@@ -57,10 +56,10 @@ const NavBar = ({ }) => {
             </MenuItem>
             {sections.map(section => (
                 <MenuItem>
-                    <Link to={section.url}>{section.title}</Link>
+                    <Link onClick={handleClick}>{section.title}</Link>
                 </MenuItem>
             ))}
-        </VertNav>
+        </Container>
     )
 };
 

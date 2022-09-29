@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components';
 import { device } from '../device';
 import LetterEditor from '../components/LetterEditor';
@@ -26,12 +26,25 @@ const Illustration = styled.div`
 `;
 
 const Home = ({ }) => {
+    const rainbowRef = useRef(null);
+    const [id, setId] = useState(-1)
+
+    const executeScroll = () => {
+        return rainbowRef?.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const changeColor = (color) => {
+        return console.log(color)
+    }
+
     return (
         <HomeContainer>
-            {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>}
+            {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar handleClick={executeScroll} changeColor={changeColor}/>}
             <Illustration>Illustration goes here (scroll down for more)</Illustration>
             <LetterEditor/>
-            <Rainbow/>
+            <div ref={rainbowRef} id={id} setId={setId}>
+                <Rainbow/>
+            </div>
             <Credits/>
         </HomeContainer>
     )
