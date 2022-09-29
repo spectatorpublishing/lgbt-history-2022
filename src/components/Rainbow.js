@@ -13,24 +13,16 @@ import {
   } from "../data/articles";
 
 const VerticalTitle = styled.div`
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
-    margin: 4rem;
+    margin: 3rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     position: relative;
     float: right;
     display: flex;
     align-self: center;
-`;
-
-const HorizontalTitle = styled.div`
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 3rem;
-    color: white;
-    display: flex;
 `;
 
 const Container = styled.div`
@@ -55,7 +47,14 @@ const Modal = styled.div`
     width: ${props => props.open ? '100%' : 'auto'};
 `;
 
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
 const Color = styled.div`
+    display: flex;
+    flex-direction: row;
     background-color: ${props => props.open ? props.saturated : props.color};
     height: auto;
     flex-grow: 1;
@@ -68,18 +67,22 @@ const Color = styled.div`
 const Stripe = ({ open, color, saturated, title, articles }) => {
     return (
         <Color open={open} color={color} saturated={saturated}>
-            { open 
-                ? <HorizontalTitle> {title}</HorizontalTitle> 
-                : <VerticalTitle>{title}</VerticalTitle>
-            }
-            { open ? articles.map(article => (
-                <Article
-                    link={article.article_link}
-                    title={article.article_title}
-                    author={article.article_authors}
-                    image={article.image_url}
-                />
-            )): null}
+
+            { open ? <Column>
+                {articles.map(article => (
+                    <Article
+                        link={article.article_link}
+                        title={article.article_title}
+                        author={article.article_authors}
+                        image={article.image_url}
+                    />
+                ))}
+            </Column> : null}
+
+            <Column>
+                <VerticalTitle>{title}</VerticalTitle>
+            </Column>
+
         </Color>
     )
 }

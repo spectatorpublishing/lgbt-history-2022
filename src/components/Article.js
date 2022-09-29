@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Border = styled.div`    
-    padding: 0 3rem 3rem 3rem;
+    margin: 3rem;
     color: white;
     alignItems: 'center';
     justifyContent: 'center';
