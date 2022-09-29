@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Border = styled.div`
+const Border = styled.div`    
     padding: 80px;
-    padding-left: 120px;
     padding-bottom: 20px;
     color: white;
+    alignItems: 'center';
+    justifyContent: 'center';
     font-family: Josefin Sans;
 `;
 
@@ -21,8 +22,19 @@ const Author = styled.div`
     font-weight: 400;
     font-size: 30px;
 `;
-const Filter = styled.div`
-    filter: grayscale(1);
+
+const Image = styled.div`
+    display: flex;
+    img {
+        filter: grayscale(100%); 
+        align-items: 'center';
+        justifyContent: 'center';
+        height: null;
+        width: 100%;
+    }
+    img:hover {
+        filter: grayscale(0%);
+    }
 `;
 
 const p = styled.div`
@@ -38,7 +50,7 @@ const Article = ({ link, title, author, image }) => {
         <Container>
         <Border>
             <a href = {link}>
-            <Filter><img style = {{height: 500, flex: 1, width: null, }} src = {image}></img></Filter>
+            <Image><img src = {image}></img></Image>
             </a>
             <p><Title>{title}</Title></p>
             <p><Author>{author}</Author></p>
