@@ -32,7 +32,7 @@ const VertNav = styled.div`
 `;
 
 const MenuItem = styled.div`
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     a {
         text-decoration: none;
         color: ${theme.colors.white};
