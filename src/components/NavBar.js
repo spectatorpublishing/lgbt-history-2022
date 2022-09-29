@@ -19,19 +19,6 @@ const Container = styled.div`
     }
 `;
 
-// const VertNav = styled.div`
-//     font-family: 'Barlow', sans-serif;
-//     font-weight: bold;
-//     text-align: right;
-//     position: fixed;
-//     right: 1vw;
-//     top:3vh;
-//     font-weight:700;
-//     z-index:100;
-//     @media only screen and (max-width: 768px){
-//     }
-// `;
-
 const MenuItem = styled.div`
     padding: 1rem 2rem;
     cursor: pointer;
@@ -44,7 +31,7 @@ const MenuItem = styled.div`
     }
 `;
 
-const NavBar = ({handleClick}) => {
+const NavBar = ({ handleClick }) => {
     return (
         <Container>
             <MenuItem>
