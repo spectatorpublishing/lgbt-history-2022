@@ -5,6 +5,9 @@ import theme from '../theme';
 
 const Wrapper = styled.div`
     padding: 120px; 
+    @media only screen and (max-width: 768px){
+        padding: 60px;
+    }
 `;
 
 const Border = styled.div`
@@ -12,12 +15,19 @@ const Border = styled.div`
     padding: 80px;
     padding-left: 150px;
     padding-right: 150px;
+    @media only screen and (max-width: 768px){
+        padding: 20px;
+    }
 `;
 
 const Title = styled.div`
     font-size: 70px; 
     font-weight: 400;
     line-height: 70px;
+    @media only screen and (max-width: 768px){
+        line-height: 60px;
+        font-size: 2.5rem;
+    }
 `;
 
 const Bar = styled.div`
@@ -56,6 +66,7 @@ const Container = styled.div`
     font-family: Josefin Sans;
     color: rgba(0, 117, 255, 0.8);
     @media only screen and (max-width: 768px){
+
     }
 `;
 
