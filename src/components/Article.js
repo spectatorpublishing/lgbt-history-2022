@@ -26,6 +26,7 @@ const Image = styled.div`
         justifyContent: 'center';
         height: null;
         width: 100%;
+        transition-duration:0.5s;
     }
     img:hover {
         filter: grayscale(0%);

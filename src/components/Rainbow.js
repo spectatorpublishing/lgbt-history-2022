@@ -55,6 +55,7 @@ const Color = styled.div`
         background-color: ${props => props.saturated};
     }
     overflow: scroll;
+    transition-duration:0.5s;
 `;
 
 const Stripe = ({ open, color, saturated, title, articles }) => {
@@ -81,7 +82,7 @@ const Stripe = ({ open, color, saturated, title, articles }) => {
 }
 
 const Rainbow = ({ currentOpen, setCurrentOpen }) => {
-    
+
     const isOpen = (number) => {
         return currentOpen === number;
     }
