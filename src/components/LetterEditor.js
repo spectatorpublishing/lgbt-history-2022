@@ -4,28 +4,26 @@ import { device } from '../device';
 import theme from '../theme';
 
 const Wrapper = styled.div`
-    padding: 120px; 
+    padding: 8rem; 
     @media only screen and (max-width: 768px){
-        padding: 60px;
+        padding: 2rem;
     }
 `;
 
 const Border = styled.div`
-    border: 1px solid ${({ color }) => color || "CornflowerBlue"};
-    padding: 80px;
-    padding-left: 150px;
-    padding-right: 150px;
+    border-image: linear-gradient(45deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) 1;
+    border-width: 1rem;
+    border-style: dashed;
+    padding: 5rem 8rem 5rem 8rem;
     @media only screen and (max-width: 768px){
-        padding: 20px;
+        padding: 2rem;
+        border-width: 0.5rem;
     }
 `;
 
 const Title = styled.div`
-    font-size: 70px; 
-    font-weight: 400;
-    line-height: 70px;
+    font-size: 4rem; 
     @media only screen and (max-width: 768px){
-        line-height: 60px;
         font-size: 2.5rem;
     }
 `;
@@ -33,32 +31,31 @@ const Title = styled.div`
 const Bar = styled.div`
     align-items: center;
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 1.5rem;
 `;
 
 const Body = styled.div`
-    font-weight: 400;
-    line-height: 20px;
-    font-size: 20px;
-`;
-
-const p = styled.div`
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    @media only screen and (max-width: 768px){
+        font-size: 1rem;
+    }
 `;
 
 const Editor = styled.div`
-    font-weight: 700;
-    font-size: 20px;
+    margin-top: 1.25rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    @media only screen and (max-width: 768px){
+        font-size: 1rem;
+    }
 `;
 
 const Position = styled.div`
-    margin-top: -18px;
-    font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
+    @media only screen and (max-width: 768px){
+        font-size: 1rem;
+    }
 `;
 
 const Container = styled.div`
@@ -93,21 +90,21 @@ Pellentesque sagittis enim eget luctus luctus. In placerat erat id lacus ullamco
 const LetterEditor = ({ }) => {
     return (
         <Wrapper>
-        <Border>
-        <Container>
-            <Bar><Title> LETTER FROM THE EDITOR </Title></Bar>
-            <Body><p>{p1}</p></Body>
-            <Body><p>{p2}</p></Body>
-            <Body><p>{p3}</p></Body>
-            <Body><p>Sincerely,</p></Body>
-            <Editor><p>Clara Ence Morse</p></Editor>
-            <Position><p>Editor</p></Position>
-            <Editor><p>Dia Gill</p></Editor>
-            <Position><p>Managing Editor</p></Position>
-            <Editor><p>Vilanna Wang</p></Editor>
-            <Position><p>Publisher</p></Position>
-        </Container>
-        </Border>
+            <Border>
+                <Container>
+                    <Bar><Title> LETTER FROM THE EDITOR </Title></Bar>
+                    <Body>{p1}</Body>
+                    <Body>{p2}</Body>
+                    <Body>{p3}</Body>
+                    <Body>Sincerely,</Body>
+                    <Editor>Clara Ence Morse</Editor>
+                    <Position>Editor</Position>
+                    <Editor>Dia Gill</Editor>
+                    <Position>Managing Editor</Position>
+                    <Editor>Vilanna Wang</Editor>
+                    <Position>Publisher</Position>
+                </Container>
+            </Border>
         </Wrapper>
     )
 };
