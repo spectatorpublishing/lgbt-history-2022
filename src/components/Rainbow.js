@@ -3,14 +3,7 @@ import styled from 'styled-components';
 import { device } from '../device';
 import theme from '../theme';
 import Article from './Article';
-import {
-    eye_articles,
-    sports_articles,
-    opinion_articles,
-    a_and_e_articles,
-    uni_news_articles,
-    city_news_articles
-  } from "../data/articles";
+import { stripes } from '../data/sections';
 
 const VerticalTitle = styled.div`
     font-size: 3rem;
@@ -87,54 +80,8 @@ const Stripe = ({ open, color, saturated, title, articles }) => {
     )
 }
 
-export const stripes = [
-    {
-        "index": 1,
-        "title": "News",
-        "color": theme.colors.lightRed,
-        "saturated": theme.colors.saturatedRed,
-        "articles": uni_news_articles,
-    },
-    {
-        "index": 2,
-        "title": "Opinion",
-        "color": theme.colors.lightOrange,
-        "saturated": theme.colors.saturatedOrange,
-        "articles": opinion_articles,
-    },
-    {
-        "index": 3,
-        "title": "Sports",
-        "color": theme.colors.lightYellow,
-        "saturated": theme.colors.saturatedYellow,
-        "articles": sports_articles,
-    },
-    {
-        "index": 4,
-        "title": "A&E",
-        "color": theme.colors.lightGreen,
-        "saturated": theme.colors.saturatedGreen,
-        "articles": a_and_e_articles,
-    },
-    {
-        "index": 5,
-        "title": "The Eye",
-        "color": theme.colors.lightBlue,
-        "saturated": theme.colors.saturatedBlue,
-        "articles": uni_news_articles,
-    },
-    {
-        "index": 6,
-        "title": "Spectrum",
-        "color": theme.colors.lightPurple,
-        "saturated": theme.colors.saturatedPurple,
-        "articles": uni_news_articles,
-    },
-];
-
-const Rainbow = ({ }) => {
-    const [currentOpen, setCurrentOpen] = useState(-1);
-
+const Rainbow = ({ currentOpen, setCurrentOpen }) => {
+    
     const isOpen = (number) => {
         return currentOpen === number;
     }

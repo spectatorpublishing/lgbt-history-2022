@@ -41,9 +41,9 @@ const NavBar = ({ handleClick }) => {
                     width: "36px",
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </MenuItem>
-            {sections.map(section => (
+            {sections.map((section, i) => (
                 <MenuItem>
-                    <Link onClick={handleClick}>{section.title}</Link>
+                    <Link onClick={() => handleClick(i)}>{section.title}</Link>
                 </MenuItem>
             ))}
         </Container>
