@@ -9,7 +9,7 @@ const VerticalTitle = styled.div`
     font-size: 3rem;
     font-weight: bold;
     color: white;
-    margin: 3rem;
+    margin: 0 3rem 3rem 3rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     position: relative;
@@ -41,7 +41,7 @@ const Modal = styled.div`
 `;
 
 const Column = styled.div`
-    display: flex;
+    display: ${props => props.open ? 'flex' : 'none'};
     flex-direction: column;
 `
 
@@ -56,13 +56,14 @@ const Color = styled.div`
     }
     overflow: scroll;
     transition-duration:0.5s;
+    padding-top: 3rem;
 `;
 
 const Stripe = ({ open, color, saturated, title, articles }) => {
     return (
         <Color open={open} color={color} saturated={saturated}>
 
-            { open ? <Column>
+            <Column open={open}>
                 {articles.map(article => (
                     <Article
                         link={article.article_link}
@@ -71,9 +72,9 @@ const Stripe = ({ open, color, saturated, title, articles }) => {
                         image={article.image_url}
                     />
                 ))}
-            </Column> : null}
+            </Column>
 
-            <Column>
+            <Column open={true}>
                 <VerticalTitle>{title}</VerticalTitle>
             </Column>
 

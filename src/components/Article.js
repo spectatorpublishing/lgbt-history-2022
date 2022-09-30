@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Border = styled.div`    
-    margin: 3rem;
+    margin-left: 3rem;
+    padding-bottom: 3rem;
     color: white;
     alignItems: 'center';
     justifyContent: 'center';
@@ -26,7 +27,7 @@ const Image = styled.div`
         justifyContent: 'center';
         height: null;
         width: 100%;
-        transition-duration:0.5s;
+        transition-duration:s;
     }
     img:hover {
         filter: grayscale(0%);
