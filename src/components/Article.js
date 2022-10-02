@@ -33,7 +33,7 @@ const Image = styled.div`
         align-items: 'center';
         justifyContent: 'center';
         width: 100%;
-        transition-duration:s;
+        transition-duration: 0.5s;
     }
     img:hover {
         filter: grayscale(0%);
