@@ -19,19 +19,6 @@ const Container = styled.div`
     }
 `;
 
-// const VertNav = styled.div`
-//     font-family: 'Barlow', sans-serif;
-//     font-weight: bold;
-//     text-align: right;
-//     position: fixed;
-//     right: 1vw;
-//     top:3vh;
-//     font-weight:700;
-//     z-index:100;
-//     @media only screen and (max-width: 768px){
-//     }
-// `;
-
 const MenuItem = styled.div`
     padding: 1rem 2rem;
     cursor: pointer;
@@ -44,7 +31,7 @@ const MenuItem = styled.div`
     }
 `;
 
-const NavBar = ({handleClick}) => {
+const NavBar = ({ handleClick }) => {
     return (
         <Container>
             <MenuItem>
@@ -54,9 +41,9 @@ const NavBar = ({handleClick}) => {
                     width: "36px",
                 }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </MenuItem>
-            {sections.map(section => (
+            {sections.map((section, i) => (
                 <MenuItem>
-                    <Link onClick={handleClick}>{section.title}</Link>
+                    <Link onClick={() => handleClick(i)}>{section.title}</Link>
                 </MenuItem>
             ))}
         </Container>

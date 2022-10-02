@@ -2,25 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Border = styled.div`    
-    padding: 80px;
-    padding-bottom: 20px;
+    margin-left: 3rem;
+    padding-bottom: 3rem;
     color: white;
     alignItems: 'center';
     justifyContent: 'center';
     font-family: Josefin Sans;
 `;
 
-const Container = styled.div`
-    background-color: rgba(254, 15, 0, 1)
-`;
-
 const Title = styled.div`
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.5rem;
 `;
 const Author = styled.div`
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1rem;
 `;
 
 const Image = styled.div`
@@ -31,6 +27,7 @@ const Image = styled.div`
         justifyContent: 'center';
         height: null;
         width: 100%;
+        transition-duration:s;
     }
     img:hover {
         filter: grayscale(0%);
@@ -47,7 +44,6 @@ const p = styled.div`
 
 const Article = ({ link, title, author, image }) => {
     return (
-        <Container>
         <Border>
             <a href = {link}>
             <Image><img src = {image}></img></Image>
@@ -55,7 +51,6 @@ const Article = ({ link, title, author, image }) => {
             <p><Title>{title}</Title></p>
             <p><Author>{author}</Author></p>
         </Border>
-        </Container>
     )
 };
 

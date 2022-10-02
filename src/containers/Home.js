@@ -28,24 +28,21 @@ const Illustration = styled.div`
 
 const Home = ({ }) => {
     const rainbowRef = useRef(null);
-    const [id, setId] = useState(-1)
+    const [id, setId] = useState(-1);
 
-    const executeScroll = () => {
-        return rainbowRef?.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const changeColor = (color) => {
-        return console.log(color)
+    const handleClick = (id) => {
+        setId(id);
+        rainbowRef?.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     return (
         <HomeContainer>
-            {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar handleClick={executeScroll} changeColor={changeColor}/>}
+            {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar handleClick={handleClick}/>}
             <Illustration>Illustration goes here (scroll down for more)</Illustration>
             <Progress/>
             <LetterEditor/>
-            <div ref={rainbowRef} id={id} setId={setId}>
-                <Rainbow/>
+            <div ref={rainbowRef}>
+                <Rainbow currentOpen={id} setCurrentOpen={setId}/>
             </div>
             <Credits/>
         </HomeContainer>
