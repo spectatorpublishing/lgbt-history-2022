@@ -16,13 +16,32 @@ const VerticalTitle = styled.div`
     float: right;
     display: flex;
     align-self: center;
+
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
 `;
+
+const HorizontalTitle = styled.div`
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        margin: 2rem;
+        display: flex;
+        align-self: left;
+    }
+`
 
 const Container = styled.div`
     background-color: lavender;
     display: flex;
+
     @media only screen and (max-width: 768px){
-    }   
+        overflow: visible;
+    }
 `;
 
 const Flag = styled.div`
@@ -32,6 +51,11 @@ const Flag = styled.div`
     display: flex;
     height: 100vh;
     width: 100%;
+    
+    @media only screen and (max-width: 768px){
+        flex-direction: column;
+        height: fit-content;
+    }
 `;
 
 const Modal = styled.div`
@@ -57,12 +81,17 @@ const Color = styled.div`
     overflow: scroll;
     transition-duration:0.5s;
     padding-top: 3rem;
+
+    @media only screen and (max-width: 768px){
+        flex-direction: column;
+        padding-top: 0rem;
+    }
 `;
 
 const Stripe = ({ open, color, saturated, title, articles }) => {
     return (
         <Color open={open} color={color} saturated={saturated}>
-
+            <HorizontalTitle>{title}</HorizontalTitle>
             <Column open={open}>
                 {articles.map(article => (
                     <Article
