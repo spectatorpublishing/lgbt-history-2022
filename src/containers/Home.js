@@ -7,6 +7,7 @@ import theme from '../theme';
 import NavBar from '../components/NavBar';
 import MobileNavBar from '../components/MobileNavBar';
 import Rainbow from '../components/Rainbow';
+import Progress from '../components/Progress';
 
 const HomeContainer = styled.div`
     font-family: 'Josefin Sans', sans-serif;
@@ -41,6 +42,7 @@ const Home = ({ }) => {
         <HomeContainer>
             {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar handleClick={executeScroll} changeColor={changeColor}/>}
             <Illustration>Illustration goes here (scroll down for more)</Illustration>
+            <Progress/>
             <LetterEditor/>
             <div ref={rainbowRef} id={id} setId={setId}>
                 <Rainbow/>
