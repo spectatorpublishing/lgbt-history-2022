@@ -52,6 +52,7 @@ const Flag = styled.div`
     @media only screen and (max-width: 768px){
         flex-direction: column;
         height: fit-content;
+        margin: 0;
     }
 `;
 
