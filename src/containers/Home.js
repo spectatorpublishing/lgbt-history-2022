@@ -37,14 +37,14 @@ const Home = ({ }) => {
 
     return (
         <HomeContainer>
-            {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar handleClick={handleClick}/>}
+            {window.innerWidth <= 768 ? <MobileNavBar handleClick={handleClick} /> : <NavBar handleClick={handleClick} />}
             <Illustration>Illustration goes here (scroll down for more)</Illustration>
-            <Progress/>
-            <LetterEditor/>
+            <Progress />
+            <LetterEditor />
             <div ref={rainbowRef}>
-                <Rainbow currentOpen={id} setCurrentOpen={setId}/>
+                <Rainbow currentOpen={id} setCurrentOpen={setId} />
             </div>
-            <Credits/>
+            <Credits />
         </HomeContainer>
     )
 };

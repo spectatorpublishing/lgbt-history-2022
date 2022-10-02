@@ -1,19 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import HamburgerMenu from 'react-hamburger-menu';
-// import { fallDown as Menu } from 'react-burger-menu';
 import "../index.css";
 import { Link } from 'react-router-dom';
 import { sections } from '../data/sections';
 import theme from '../theme';
-
-const MenuItem = styled.div`
-    padding: 0.5rem 1rem;
-    a {
-        text-decoration: none;
-        color: ${theme.colors.black};
-    }
-`;
 
 const NavWrap = styled.div`
     text-align: center;
@@ -36,9 +27,6 @@ const NavWrap = styled.div`
     }
 `;
 
-const Tab = styled.div`
-    padding: 0.5rem 1rem;
-`;
 const Logo = styled.div`
     z-index:100;
     position:relative;
@@ -53,17 +41,32 @@ const HamburgerWrapper = styled.div`
 `;
 
 const Menu = styled.div`
+    font-family: 'Barlow', sans-serif;
+    background-color: gray;
     display: ${props => props.isOpen ? "flex" : "none"};
     flex-direction: column;
     position: absolute;
-    top: 5rem;
-    right: 0;
+    top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
 `;
 
-const MobileNavBar = ({ current }) => {
+const MenuItem = styled.div`
+    padding: 0.5rem 1rem;
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+`;
+
+const MobileNavBar = ({ handleClick }) => {
+
     const [open, setOpen] = React.useState(false);
 
-    function handleClick() {
+    function handleOpen() {
         console.log(open)
         setOpen(!open)
     }
@@ -80,7 +83,7 @@ const MobileNavBar = ({ current }) => {
             <HamburgerWrapper>
                 <HamburgerMenu
                     isOpen={open}
-                    menuClicked={() => handleClick()}
+                    menuClicked={() => handleOpen()}
                     width={30}
                     height={20}
                     strokeWidth={5}
@@ -92,15 +95,13 @@ const MobileNavBar = ({ current }) => {
                     className="over"
                 />
             </HamburgerWrapper>
-
             <Menu isOpen={open}>
-                {sections.map(section => (
-                    <MenuItem>
-                        <Link to={section.url}>{section.title}</Link>
+                {sections.map((section, i) => (
+                    <MenuItem onClick={() => handleOpen()}>
+                        <Link onClick={() => handleClick(i)}>{section.title}</Link>
                     </MenuItem>
                 ))}
             </Menu>
-
         </NavWrap>
     );
 };

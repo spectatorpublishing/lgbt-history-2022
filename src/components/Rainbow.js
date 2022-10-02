@@ -16,7 +16,6 @@ const VerticalTitle = styled.div`
     float: right;
     display: flex;
     align-self: center;
-
     @media only screen and (max-width: 768px){
         display: none;
     }
@@ -36,9 +35,7 @@ const HorizontalTitle = styled.div`
 `
 
 const Container = styled.div`
-    background-color: lavender;
     display: flex;
-
     @media only screen and (max-width: 768px){
         overflow: visible;
     }
@@ -46,7 +43,7 @@ const Container = styled.div`
 
 const Flag = styled.div`
     background-clip: content-box;
-    margin: 2rem;
+    margin: 0 8rem 8rem 8rem;
     flex-direction: row;
     display: flex;
     height: 100vh;
@@ -67,6 +64,10 @@ const Modal = styled.div`
 const Column = styled.div`
     display: ${props => props.open ? 'flex' : 'none'};
     flex-direction: column;
+    height: 100%;
+    position: ${props => props.sticky ? 'sticky' : 'relative'};
+    top: ${props => props.sticky ? '0' : 'null'};
+    right: ${props => props.sticky ? '0' : 'null'};
 `
 
 const Color = styled.div`
@@ -102,11 +103,9 @@ const Stripe = ({ open, color, saturated, title, articles }) => {
                     />
                 ))}
             </Column>
-
-            <Column open={true}>
+            <Column open sticky>
                 <VerticalTitle>{title}</VerticalTitle>
             </Column>
-
         </Color>
     )
 }

@@ -8,11 +8,18 @@ const Border = styled.div`
     alignItems: 'center';
     justifyContent: 'center';
     font-family: Josefin Sans;
+    @media only screen and (max-width: 768px){
+        margin: 0 2rem;
+        padding-bottom: 2rem;
+    }
 `;
 
 const Title = styled.div`
     font-weight: 700;
     font-size: 1.5rem;
+    @media only screen and (max-width: 768px){
+        font-size: 1.25rem;
+    }
 `;
 const Author = styled.div`
     font-weight: 400;
@@ -25,7 +32,6 @@ const Image = styled.div`
         filter: grayscale(100%); 
         align-items: 'center';
         justifyContent: 'center';
-        height: null;
         width: 100%;
         transition-duration:s;
     }
@@ -34,19 +40,11 @@ const Image = styled.div`
     }
 `;
 
-const p = styled.div`
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-`;
-
 const Article = ({ link, title, author, image }) => {
     return (
         <Border>
-            <a href = {link}>
-            <Image><img src = {image}></img></Image>
+            <a href={link}>
+                <Image><img src={image}></img></Image>
             </a>
             <p><Title>{title}</Title></p>
             <p><Author>{author}</Author></p>
