@@ -11,6 +11,9 @@ const Title = styled.div`
     overflow-wrap: break-word;
     font-size: 2.5rem;
     color: rgba(0, 117, 255, 0.8);
+    @media only screen and (max-width: 768px){
+        font-size: 1.75rem;
+    }
 `;
 
 const Container = styled.div`
@@ -40,8 +43,13 @@ const SubDiv = styled.div`
     padding: 0.5rem;
     font-family: Josefin Sans;
     font-size: 1.2rem;
-    @media ${device.tablet} {
+    @media only screen and (max-width: 768px){
         width: fit-content;
+        font-size: 0.75rem;
+    }
+    @media (min-width: 768px){
+        width: fit-content;
+        font-size: 0.75rem;
     }
     color: rgba(0, 117, 255, 0.8);
 `;
@@ -134,6 +142,7 @@ const Credits = ({ }) => {
                         </Section>
                         <Section>
                             <H>Photo</H>
+                            <p>Millie Felder, Photo Editor</p>
                         </Section>
                     </SubDiv>
                     <SubDiv>
@@ -152,14 +161,9 @@ const Credits = ({ }) => {
                         </Section>
                         <Section>
                             <H>Sports</H>
-                          
                         </Section>
                     </SubDiv>
-                    
                 </Row>
-                
-                
-
             </Body>
             </Spacing>
             </Border>
