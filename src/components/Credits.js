@@ -6,13 +6,10 @@ import theme from '../theme';
 const Title = styled.div`
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-wrap: break-word;
     font-size: 2.5rem;
     color: rgba(0, 117, 255, 0.8);
     @media only screen and (max-width: 768px){
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 `;
 
@@ -26,9 +23,9 @@ const Container = styled.div`
 
 
 const Body = styled.div`
-    display: flex;
+    /*display: flex;
     -webkit-box-pack: center;
-    justify-content: center;
+    justify-content: center;*/
 `;
 
 const Spacing = styled.div`
@@ -39,16 +36,11 @@ const Spacing = styled.div`
 
 
 const SubDiv = styled.div`
-    width: 33%;
-    padding: 0.5rem;
+    width: 33.33%;
+    padding: 1%;
     font-family: Josefin Sans;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     @media only screen and (max-width: 768px){
-        width: fit-content;
-        font-size: 0.75rem;
-    }
-    @media (min-width: 768px){
-        width: fit-content;
         font-size: 0.75rem;
     }
     color: rgba(0, 117, 255, 0.8);
@@ -70,16 +62,6 @@ const H = styled.div`
 const Row = styled.div`
     display: flex;
     text-align: left;
-    
-    
-    /*@media (max-width: 1000px) {
-        font-size:0.75em;
-    }
-    @media (max-width: 768px) {
-        margin-left:1.25em;
-        font-size:1em !important;
-        text-align: center;
-    }*/
 `;
 
 const dep = styled.div`
@@ -92,7 +74,7 @@ const Border = styled.div`
     border-style: dashed;
     padding: 5rem 8rem 5rem 8rem;
     @media only screen and (max-width: 768px){
-        padding: 2rem;
+        padding: 1rem;
         border-width: 0.5rem;
     }
 `;
@@ -121,10 +103,11 @@ const Credits = ({ }) => {
                         </Section>
                         <Section>
                             <H>Arts and Entertainment</H>
+                            <p>Bella Druckman, Arts and Entertainment Editor</p>
                         </Section>
                         <Section>
                             <H>Illustrations</H> 
-
+                            <p>Yingjie Wang, Illustrations Editor</p>
                         </Section>
                     </SubDiv>
                     <SubDiv>
@@ -138,7 +121,7 @@ const Credits = ({ }) => {
                         </Section>
                         <Section>
                             <H>Opinion</H>
-                           
+                            <p>Senem Yurdakul, Editorial Page Editor</p>
                         </Section>
                         <Section>
                             <H>Photo</H>
@@ -157,10 +140,13 @@ const Credits = ({ }) => {
                         </Section>
                         <Section>
                             <H>Spectrum</H>
-                          
+                            <p>Ariana Novo, Spectrum Editor</p>
+                            <p>Emma Cho, Deputy Spectrum Editor</p>
                         </Section>
                         <Section>
                             <H>Sports</H>
+                            <p>Miles Schachner, Sports Editor</p>
+                            <p>Rebecca Wachen, Deputy Sports Editor</p>
                         </Section>
                     </SubDiv>
                 </Row>
