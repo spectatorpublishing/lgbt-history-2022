@@ -16,6 +16,7 @@ const Container = styled.div`
     top: 2rem;
     right: 1rem;
     @media only screen and (max-width: 768px){
+       display:none;
     }
 `;
 
@@ -24,9 +25,9 @@ const MenuItem = styled.div`
     cursor: pointer;
     a {
         text-decoration: none;
-        color: black;
+        color: gray;
         img {
-            filter: invert(100%);
+            filter: invert(50%);
         }
     }
     a:hover {

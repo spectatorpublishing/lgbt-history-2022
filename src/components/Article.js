@@ -5,9 +5,11 @@ const Border = styled.div`
     margin-left: 3rem;
     padding-bottom: 3rem;
     color: white;
-    alignItems: 'center';
-    justifyContent: 'center';
     font-family: Josefin Sans;
+    a {
+        text-decoration: none;
+        color: white;
+    }
     @media only screen and (max-width: 768px){
         margin: 0 2rem;
         padding-bottom: 2rem;
@@ -45,9 +47,9 @@ const Article = ({ link, title, author, image }) => {
         <Border>
             <a href={link}>
                 <Image><img src={image}></img></Image>
+                <p><Title>{title}</Title></p>
+                <p><Author>{author}</Author></p>
             </a>
-            <p><Title>{title}</Title></p>
-            <p><Author>{author}</Author></p>
         </Border>
     )
 };

@@ -24,6 +24,25 @@ const Illustration = styled.div`
     object-fit: contain;
 
     @media only screen and (max-width: 768px){
+        display: none;
+    }
+
+    img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+`;
+
+const IllustrationMobile = styled.div`
+    display: none;
+    @media only screen and (max-width: 768px){
+        display: flex;
+        height: 100vh;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
         background-color: white;
         max-height: calc(100vh - 5rem);
         margin-bottom: 2rem;
@@ -47,9 +66,10 @@ const Home = ({ }) => {
 
     return (
         <HomeContainer>
-            {window.innerWidth <= 768 ? <MobileNavBar handleClick={handleClick} /> : <NavBar handleClick={handleClick} />}
-            <Illustration><img src={ window.innerWidth <= 768 ? "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/S4PRGHGDZ5GTTKQVUWKFMIQBSY.png" :
-            "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/Z4BWW6HGSZAYDJXUYI4FYWCDJU.png"}></img></Illustration>
+            <NavBar handleClick={handleClick} />
+            <MobileNavBar handleClick={handleClick} />
+            <Illustration><img src={"https://cloudfront-us-east-1.images.arcpublishing.com/spectator/Z4BWW6HGSZAYDJXUYI4FYWCDJU.png"}></img></Illustration>
+            <IllustrationMobile><img src={"https://cloudfront-us-east-1.images.arcpublishing.com/spectator/S4PRGHGDZ5GTTKQVUWKFMIQBSY.png"}></img></IllustrationMobile>
             <LetterEditor />
             <div ref={rainbowRef}>
                 <Rainbow currentOpen={id} setCurrentOpen={setId} />

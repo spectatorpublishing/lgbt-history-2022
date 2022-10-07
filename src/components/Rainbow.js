@@ -49,7 +49,12 @@ const Flag = styled.div`
     display: flex;
     height: 100vh;
     width: 100%;
-    
+    @media only screen and (max-width: 1200px){
+        margin: 0 2rem;
+    }
+    @media only screen and (max-width: 1000px){
+        margin: 0rem;
+    }
     @media only screen and (max-width: 768px){
         flex-direction: column;
         height: fit-content;
@@ -85,7 +90,7 @@ const Color = styled.div`
     overflow: scroll;
     transition-duration:0.5s;
     padding-top: 3rem;
-
+    cursor: ${props => props.open ? "auto" : "pointer"};
     @media only screen and (max-width: 768px){
         flex-direction: column;
         padding-top: 0rem;

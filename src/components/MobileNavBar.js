@@ -22,7 +22,7 @@ const NavWrap = styled.div`
     a {
         padding: 0.5rem;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
        display:none;
     }
 `;
