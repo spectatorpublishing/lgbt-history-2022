@@ -12,7 +12,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 8rem;
+    width: 10rem;
     top: 2rem;
     right: 1rem;
     @media only screen and (max-width: 768px){
@@ -24,7 +24,10 @@ const MenuItem = styled.div`
     cursor: pointer;
     a {
         text-decoration: none;
-        color: ${theme.colors.white};
+        color: black;
+        img {
+            filter: invert(100%);
+        }
     }
     a:hover {
         color: #ACBAED;
@@ -43,7 +46,7 @@ const NavBar = ({ handleClick }) => {
             </MenuItem>
             {sections.map((section, i) => (
                 <MenuItem>
-                    <Link onClick={() => handleClick(i)}>{section.title}</Link>
+                    <Link onClick={() => handleClick(i+1)}>{section.title}</Link>
                 </MenuItem>
             ))}
         </Container>

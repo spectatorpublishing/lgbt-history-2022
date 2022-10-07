@@ -9,7 +9,7 @@ import theme from '../theme';
 const NavWrap = styled.div`
     text-align: center;
     padding-top: 0rem;
-    height:10vh;
+    height:5rem;
     justify-content: space-between;
     align-items:center;
     display:flex;
@@ -98,7 +98,7 @@ const MobileNavBar = ({ handleClick }) => {
             <Menu isOpen={open}>
                 {sections.map((section, i) => (
                     <MenuItem onClick={() => handleOpen()}>
-                        <Link onClick={() => handleClick(i)}>{section.title}</Link>
+                        <Link onClick={() => handleClick(i+1)}>{section.title}</Link>
                     </MenuItem>
                 ))}
             </Menu>
