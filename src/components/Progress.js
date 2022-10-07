@@ -13,12 +13,12 @@ const Flag = styled.div`
     conic-gradient(at 14% 50%, #0000 221.25deg, #753000 222deg 318deg, #0000 318.25deg),
     conic-gradient(at 17% 50%, #0000 221.25deg, black 222deg 318deg, #0000 318.25deg),
     linear-gradient(
-        ${theme.colors.saturatedRed} 0 16.66%, 
-        ${theme.colors.saturatedOrange} 0 33.33%, 
-        ${theme.colors.saturatedYellow} 0 50%, 
-        ${theme.colors.saturatedGreen} 0 66.66%, 
-        ${theme.colors.saturatedBlue} 0 83.33%, 
-        ${theme.colors.saturatedPurple} 0);
+        ${theme.colors.lightRed} 0 16.66%, 
+        ${theme.colors.lightOrange} 0 33.33%, 
+        ${theme.colors.lightYellow} 0 50%, 
+        ${theme.colors.lightGreen} 0 66.66%, 
+        ${theme.colors.lightBlue} 0 83.33%, 
+        ${theme.colors.lightPurple} 0);
 `;
 
 const Progress = ({ }) => {
