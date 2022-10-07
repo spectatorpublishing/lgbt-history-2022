@@ -9,7 +9,7 @@ const VerticalTitle = styled.div`
     font-size: 3rem;
     font-weight: bold;
     color: white;
-    margin: 0 3rem 3rem 3rem;
+    margin: 0 2rem 2rem 2rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     position: relative;
@@ -36,6 +36,7 @@ const HorizontalTitle = styled.div`
 
 const Container = styled.div`
     display: flex;
+    max-width: 100%;
     @media only screen and (max-width: 768px){
         overflow: visible;
     }
@@ -43,7 +44,7 @@ const Container = styled.div`
 
 const Flag = styled.div`
     background-clip: content-box;
-    margin: 0 8rem 8rem 8rem;
+    margin: 0 8rem;
     flex-direction: row;
     display: flex;
     height: 100vh;
@@ -80,6 +81,7 @@ const Color = styled.div`
     &:hover {
         background-color: ${props => props.saturated};
     }
+    justify-content: center;
     overflow: scroll;
     transition-duration:0.5s;
     padding-top: 3rem;
