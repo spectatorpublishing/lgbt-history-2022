@@ -17,12 +17,22 @@ const HomeContainer = styled.div`
 
 const Illustration = styled.div`
     display: flex;
-    background-color: lightgray;
     height: 100vh;
-    width: 100vw;
+    width: auto;
     justify-content: center;
     align-items: center;
+    object-fit: contain;
+
     @media only screen and (max-width: 768px){
+        background-color: white;
+        max-height: calc(100vh - 5rem);
+        margin-bottom: 2rem;
+    }
+
+    img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
     }
 `;
 
@@ -38,13 +48,14 @@ const Home = ({ }) => {
     return (
         <HomeContainer>
             {window.innerWidth <= 768 ? <MobileNavBar handleClick={handleClick} /> : <NavBar handleClick={handleClick} />}
-            <Illustration>Illustration goes here (scroll down for more)</Illustration>
-            <Progress />
+            <Illustration><img src={ window.innerWidth <= 768 ? "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/S4PRGHGDZ5GTTKQVUWKFMIQBSY.png" :
+            "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/Z4BWW6HGSZAYDJXUYI4FYWCDJU.png"}></img></Illustration>
             <LetterEditor />
             <div ref={rainbowRef}>
                 <Rainbow currentOpen={id} setCurrentOpen={setId} />
             </div>
             <Credits />
+            <Progress />
         </HomeContainer>
     )
 };
