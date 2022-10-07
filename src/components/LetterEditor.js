@@ -67,24 +67,30 @@ const Container = styled.div`
     }
 `;
 
-const p1 = `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices metus vehicula purus fringilla venenatis. Fusce eget lorem at justo congue molestie sed in ligula. Nullam molestie lobortis arcu, quis congue nisi cursus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent pretium tellus et arcu tincidunt ornare. Aliquam efficitur semper quam, in interdum sem laoreet non. Donec in nisi et felis fermentum fringilla. Fusce at nisl arcu.
-
-Sed et justo id elit aliquam fermentum.
+const p1 = `Dear readers,
 `;
 
-const p2 = `
-Nullam viverra mattis turpis, a porttitor mi cursus sed. Sed vitae nisl tortor. Fusce accumsan viverra ex sit amet lobortis. Vivamus orci enim, auctor et facilisis vitae, volutpat non diam. Morbi orci nulla, facilisis ac porta eleifend, dignissim a metus. Quisque dolor nunc, lacinia feugiat nisi ac, varius suscipit tellus. Curabitur massa metus, ultrices non rutrum sed, pretium vitae ante.
-
-Nunc mollis risus at metus varius blandit. Aliquam felis ante, euismod ut convallis in, volutpat et magna. 
+const p2 = `Every year in June, LGBTQ people and allies come together to celebrate Pride Month. In addition to these 
+celebrations, Americans commemorate LGBTQ History Month in October. The month includes both National Coming Out Day 
+and the anniversary of the National March on Washington for Lesbian and Gay Rights, held first in 1979. 
 `;
 
-const p3 = `
+const p3 = `Columbia is a locus of national LBGTQ history. It was the first university in the country to have a gay 
+student organization and is today where Professor George Chauncey—the first-ever scholar of LGBTQ history to win the 
+Kluge Award—teaches. Lesbian, gay, bisexual, transgender, and queer Columbians have played integral roles in shaping 
+our community. In this edition, we have worked to commemorate the lives of queer Columbians and illuminate queer 
+experiences at Columbia today.
+`;
 
-Proin tincidunt nisl non lectus molestie blandit. Mauris lacus odio, convallis a tortor vitae, consectetur pretium felis. Aenean volutpat ultricies nunc, vitae mattis nulla eleifend sit amet. Praesent molestie leo nec metus vehicula, ac rhoncus ipsum vulputate. Nunc vel tortor a mi tempor commodo. Nulla euismod metus erat, ac consectetur nibh vulputate quis. Phasellus condimentum feugiat est a dictum.
+const p4 = `Within this edition, you can hear from Chauncey himself about the importance of studying LGBTQ history. 
+You can read about trans and nonbinary students grappling with what it means to attend a historically women’s college,
+and the club they created to provide support and socialize. And you can read heartfelt perspectives on queer 
+experiences, from interrogating hookup culture to exploring intersectional identity, in our opinion pages.
+`;
 
-Pellentesque sagittis enim eget luctus luctus. In placerat erat id lacus ullamcorper posuere. Pellentesque aliquam vulputate blandit. Maecenas laoreet nisi vel enim aliquet, eu aliquet sapien faucibus. Duis sed diam at est luctus vulputate non vitae tortor. Ut consectetur at eros in iaculis. Curabitur quam felis, porta aliquet neque sit amet, placerat tristique leo. Nulla facilisi.
-
+const p5 = `We hope you leave this edition with a deeper understanding of the contributions made by queer Columbians
+and community members to our school and beyond.  We are excited to continue our coverage of queer experiences at 
+Columbia and to celebrate queer history, voices, stories, and lives all year round.
 `;
 
 const LetterEditor = ({ }) => {
@@ -93,16 +99,16 @@ const LetterEditor = ({ }) => {
             <Border>
                 <Container>
                     <Bar><Title> LETTER FROM THE EDITOR </Title></Bar>
-                    <Body>{p1}</Body>
+                    <Body><b>{p1}</b></Body>
                     <Body>{p2}</Body>
                     <Body>{p3}</Body>
+                    <Body>{p4}</Body>
+                    <Body>{p5}</Body>
                     <Body>Sincerely,</Body>
                     <Editor>Clara Ence Morse</Editor>
                     <Position>Editor</Position>
                     <Editor>Dia Gill</Editor>
                     <Position>Managing Editor</Position>
-                    <Editor>Vilanna Wang</Editor>
-                    <Position>Publisher</Position>
                 </Container>
             </Border>
         </Wrapper>
