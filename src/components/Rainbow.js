@@ -129,6 +129,7 @@ const Rainbow = ({ currentOpen, setCurrentOpen }) => {
             <Flag >
                 {stripes.map(stripe => (
                     <Modal
+                        id={stripe.title.toLowerCase().split(" ").join("-")}
                         open={isOpen(stripe.index)}
                         onClick={() => setCurrentOpen(isOpen(stripe.index) ? -1 : stripe.index)}>
                         <Stripe

@@ -5,6 +5,7 @@ import "../index.css";
 import { Link } from 'react-router-dom';
 import { sections } from '../data/sections';
 import theme from '../theme';
+import { HashLink } from 'react-router-hash-link';
 
 const NavWrap = styled.div`
     text-align: center;
@@ -98,7 +99,7 @@ const MobileNavBar = ({ handleClick }) => {
             <Menu isOpen={open}>
                 {sections.map((section, i) => (
                     <MenuItem onClick={() => handleOpen()}>
-                        <Link onClick={() => handleClick(i+1)}>{section.title}</Link>
+                        <HashLink smooth to={'/#' + section.title.toLowerCase().split(" ").join("-")} onClick={() => handleClick(i+1)}>{section.title}</HashLink>
                     </MenuItem>
                 ))}
             </Menu>

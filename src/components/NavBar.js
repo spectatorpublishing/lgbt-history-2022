@@ -4,6 +4,7 @@ import { device } from '../device';
 import { sections } from '../data/sections';
 import { Link } from 'react-router-dom';
 import theme from '../theme';
+import { HashLink } from 'react-router-hash-link';
 
 const Container = styled.div`
     font-family: 'Barlow', sans-serif;
@@ -47,7 +48,7 @@ const NavBar = ({ handleClick }) => {
             </MenuItem>
             {sections.map((section, i) => (
                 <MenuItem>
-                    <Link onClick={() => handleClick(i+1)}>{section.title}</Link>
+                    <HashLink smooth to={'/#' + section.title.toLowerCase().split(" ").join("-")} onClick={() => handleClick(i+1)}>{section.title}</HashLink>
                 </MenuItem>
             ))}
         </Container>
