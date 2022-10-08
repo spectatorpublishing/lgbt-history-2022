@@ -18,7 +18,7 @@ const NavWrap = styled.div`
     left:0;
     flex-wrap: wrap;
     z-index:100;
-    background-color: gray;
+    background-color: white;
     a {
         padding: 0.5rem;
     }
@@ -42,7 +42,7 @@ const HamburgerWrapper = styled.div`
 
 const Menu = styled.div`
     font-family: 'Barlow', sans-serif;
-    background-color: gray;
+    background-color: white;
     display: ${props => props.isOpen ? "flex" : "none"};
     flex-direction: column;
     position: absolute;
@@ -56,7 +56,7 @@ const MenuItem = styled.div`
     padding: 0.5rem 1rem;
     a {
         text-decoration: none;
-        color: white;
+        color: #909095;
         font-weight: 700;
         font-size: 1.25rem;
     }
@@ -78,7 +78,7 @@ const MobileNavBar = ({ handleClick }) => {
                 }}><img style={{
                     height: "40px",
                     width: "40px",
-                }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
+                }} src="https://summer-fellowship-2022.s3.amazonaws.com/grey_crown.png"></img></a>
             </Logo>
             <HamburgerWrapper>
                 <HamburgerMenu
@@ -88,7 +88,7 @@ const MobileNavBar = ({ handleClick }) => {
                     height={20}
                     strokeWidth={5}
                     rotate={0}
-                    color='white'
+                    color='#909095'
                     borderRadius={0}
                     animationDuration={0.5}
                     zIndex={100}
