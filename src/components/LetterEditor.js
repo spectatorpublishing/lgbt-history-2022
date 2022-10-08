@@ -106,7 +106,7 @@ const LetterEditor = ({ }) => {
                     <Body>{p5}</Body>
                     <Body>Sincerely,</Body>
                     <Editor>Clara Ence Morse</Editor>
-                    <Position>Editor</Position>
+                    <Position>Editor-in-Chief</Position>
                     <Editor>Dia Gill</Editor>
                     <Position>Managing Editor</Position>
                 </Container>

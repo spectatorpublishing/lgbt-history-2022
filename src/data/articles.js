@@ -45,7 +45,7 @@ export const city_news_articles = [
     "article_link": "https://www.columbiaspectator.com/news/2022/10/05/ali-forney-center-celebrates-20-years-of-serving-homeless-lgbtq-youth/",
     "article_title": "Ali Forney Center celebrates 20 years of serving homeless LGBTQ+ youth",
     "article_authors": "Amira McKee",
-    "image_url": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/TM7IROHGK5BJNL5UYQRDC2U7WE.jpg"
+    "image_url": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/3ELRCT5E5BDMDL3K7YVZLSTIXU.png"
   }
  ];
 

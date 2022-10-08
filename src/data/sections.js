@@ -50,7 +50,7 @@ export const stripes = [
     },
     {
         "index": 3,
-        "title": "Uni News",
+        "title": "University News",
         "color": theme.colors.lightYellow,
         "saturated": theme.colors.saturatedYellow,
         "articles": uni_news_articles,
