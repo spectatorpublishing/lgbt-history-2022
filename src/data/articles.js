@@ -136,7 +136,7 @@ export const spectrum_articles = [
   },
   {
     "article_link": "https://www.columbiaspectator.com/spectrum/2022/10/03/13-lgbtq-bars-and-clubs-in-new-york-city/",
-    "article_title": "14 LGBTQ bars and clubs in New York City",
+    "article_title": "13 LGBTQ bars and clubs in New York City",
     "article_authors": "Emma Melnikov and Anuthmi Waas",
     "image_url": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/NSUWRDML5VGJ7B6UJAMW6VAQS4.jpg"
   }
